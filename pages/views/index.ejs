@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Subscription Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var options = {
+            strings: [
+              "Pay smarter, subscribe faster, and enjoy crypto-powered services.",
+              "Seamless payments with Web3 subscriptions.",
+              "Experience the future of digital services!"
+            ],
+            typeSpeed: 50, // Typing speed
+            backSpeed: 30, // Backspace speed
+            loop: true,     // Loop animation
+            showCursor: true, // Show cursor
+            cursorChar: "|", // Cursor style
+          };
+      
+          var typed = new Typed("#typed-text", options);
+        });
+      </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #4f46e5;
+            --dark-bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.8);
+            --light-text: #f8fafc;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: var(--light-text);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .navbar {
+            background-color: rgba(15, 23, 42, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .hero-section {
+            padding-top: 7rem;
+            min-height: 10vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+        
+        .primary-btn {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .primary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+        }
+        
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        
+        .carousel-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .custom-placeholder {
+            height: 400px;
+            background: linear-gradient(45deg, #4f46e5, #6366f1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            border-radius: 12px;
+        }
+        
+        /* Add spacing for fixed navbar */
+        main {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <!-- Navbar -->
+    
+
+    <nav class="bg-white/30 dark:bg-gray-900/30 backdrop-blur-md border-none">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="https://cryptologos.cc/logos/chainlink-link-logo.png?v=040" class="h-8" alt="Flowbite Logo" />
+                <span class="self-center text-xl font-medium whitespace-nowrap dark:text-white">CryptoAI</span>
+            </a>
+            <!-- Crypto Ticker (Replacing Search) -->
+        <div class="hidden md:block w-1/3 overflow-hidden whitespace-nowrap">
+            <marquee class="text-gray-800 dark:text-white font-semibold">
+                Bitcoin: $43,000 | Ethereum: $3,200 | Dogecoin: $0.15 | Solana: $120 | Cardano: $0.45 🚀
+            </marquee>
+        </div>
+            <!-- <div class="flex md:order-2">
+                <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" 
+                    class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 
+                    focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+                <div class="relative hidden md:block">
+                    <div class="absolute inset-y-0 left-5 flex items-center pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" 
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                        <span class="sr-only">Search icon</span>
+                    </div>
+                    <input type="text" id="search-navbar" 
+                        class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 
+                        focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 
+                        dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                        placeholder="Search...">
+                </div>
+            </div> -->
+            
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border-none rounded-lg bg-transparent md:space-x-8 
+                    rtl:space-x-reverse md:flex-row md:mt-0 md:border-none md:bg-transparent dark:bg-transparent">
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-gray-900 md:hover:text-blue-700 md:p-0 
+                            dark:text-white md:dark:hover:text-blue-500">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-gray-900 md:hover:text-blue-700 md:p-0 
+                            dark:text-white md:dark:hover:text-blue-500">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-gray-900 md:hover:text-blue-700 md:p-0 
+                            dark:text-white md:dark:hover:text-blue-500">Services</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <main>
+       <!-- Hero Section -->
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-3 fw-bold mb-4">Your <span class="gradient-text">Web3</span> Subscription Hub</h1>
+        <p class="lead text-light opacity-75 mb-5">
+            <span id="typed-text">Loading...</span> <!-- Default text added -->
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="btn primary-btn btn-lg">Service provider</a>
+            <a href="#" class="btn btn-outline-light btn-lg">Consumer</a>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Features Section -->
+        <section class="py-5 container">
+            <h2 class="text-center mb-5 fw-bold">Premium Features</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary rounded-circle p-3 me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-currency-bitcoin" viewBox="0 0 16 16">
+                                    <path d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-1.5v10Zm3.75-9v3h.5c.896 0 1.5-.611 1.5-1.5 0-.885-.585-1.5-1.5-1.5h-.5Zm0 4v3h.5c.896 0 1.5-.611 1.5-1.5 0-.885-.585-1.5-1.5-1.5h-.5Z"/>
+                                </svg>
+                            </div>
+                            <h3 class="fw-bold m-0">Crypto Payments</h3>
+                        </div>
+                        <p class="text-light opacity-75">Pay for subscriptions using any major cryptocurrency with zero transaction fees.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary rounded-circle p-3 me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16">
+                                    <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7.3 7.3 0 0 1-.989.596l-.24.098c-.383.159-.806.17-1.196-.013l-.211-.087a7.7 7.7 0 0 1-.99-.596 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56z"/>
+                                    <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.874 1.312a.5.5 0 0 1-.873.486L7.5 8.528V10.5a.5.5 0 0 1-1 0V8.528l-1.001 1.185a.5.5 0 0 1-.873-.486L5.5 7.914A1.5 1.5 0 0 1 4.5 6.5v-1a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v1z"/>
+                                </svg>
+                            </div>
+                            <h3 class="fw-bold m-0">Smart Contracts</h3>
+                        </div>
+                        <p class="text-light opacity-75">Automated subscription management through secure, audited smart contracts.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary rounded-circle p-3 me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-robot" viewBox="0 0 16 16">
+                                    <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.8 24.8 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.3 25.3 0 0 0 1.922.188.25.25 0 0 0 .073-.495 24.9 24.9 0 0 1-1.908-.187l-.68.689a.25.25 0 0 0-.18.083z"/>
+                                    <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM2 7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5V8H2zm1 3a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-2H3z"/>
+                                </svg>
+                            </div>
+                            <h3 class="fw-bold m-0">AI Insights</h3>
+                        </div>
+                        <p class="text-light opacity-75">Get personalized subscription recommendations based on your usage patterns.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Carousel Section -->
+        <section class="py-5 container">
+            <h2 class="text-center mb-5 fw-bold">Featured Services</h2>
+            <div class="carousel-container shadow-lg">
+                <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="custom-placeholder text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-laptop mb-3" viewBox="0 0 16 16">
+                                    <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+                                </svg>
+                                <p>Premium Technology Services</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="custom-placeholder text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-currency-bitcoin mb-3" viewBox="0 0 16 16">
+                                    <path d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-1.5v10Zm3.75-9v3h.5c.896 0 1.5-.611 1.5-1.5 0-.885-.585-1.5-1.5-1.5h-.5Zm0 4v3h.5c.896 0 1.5-.611 1.5-1.5 0-.885-.585-1.5-1.5-1.5h-.5Z"/>
+                                </svg>
+                                <p>Crypto Payment Solutions</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="custom-placeholder text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-collection mb-3" viewBox="0 0 16 16">
+                                    <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/>
+                                </svg>
+                                <p>Subscription Management</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section class="py-5 bg-dark">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-4">Ready to revolutionize your subscriptions?</h2>
+                <p class="lead text-light opacity-75 mb-4">Join thousands of users already enjoying Web3-powered subscription services.</p>
+                <a href="#" class="btn primary-btn btn-lg px-5">Get Started</a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="py-5 bg-dark mt-5 border-top border-gray-800">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="gradient-text fw-bold mb-4">Web3Subs</h5>
+                    <p class="text-light opacity-75">The future of subscription services powered by blockchain technology.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg></a>
+                        <a href="#" class="text-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16"><path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.036.038.05c1.522 1.116 2.992 1.795 4.43 2.239a.05.05 0 0 0 .054-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.028-.067c-.308-.111-.608-.232-.901-.36a.05.05 0 0 1-.022-.062.5.5 0 0 1 .024-.034c.061-.045.122-.092.181-.144a.05.05 0 0 1 .05-.007c2.619 1.196 5.454 1.196 8.045 0a.05.05 0 0 1 .051.007c.06.052.121.099.182.144q.022.019.005.034a.05.05 0 0 1-.023.062c-.293.128-.593.248-.901.36a.05.05 0 0 0-.028.067c.236.466.51.908.817 1.329a.05.05 0 0 0 .055.019c1.444-.444 2.915-1.123 4.43-2.239q.035-.014.039-.05c.333-3.435-.39-6.434-1.653-9.108a.04.04 0 0 0-.022-.017m-8.61 7.26c-.871 0-1.59-.795-1.59-1.77 0-.976.719-1.77 1.59-1.77 1.88.018 1.597.795 1.59 1.77 0 .975-.719 1.77-1.59 1.77m5.87 0c-.872 0-1.59-.795-1.59-1.77 0-.976.718-1.77 1.59-1.77.88 0 1.59.794 1.59 1.77 0 .975-.719 1.77-1.59 1.77"/></svg></a>
+                        <a href="#" class="text-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg></a>
+                        <a href="#" class="text-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 1.076-.427 1.066-.836c-.004-.154-.181-.248-.4-.395-.604-.407-.975-.66 0-.66 1.316 0 2.627 1.004 2.627 1.004q.846.464 1.652.013c.186-.104.346-.215.343-.47-.002-.195-.175-.568-.355-.792q-1.264-1.577-3.713-1.088z"/></svg></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+                    <h6 class="fw-bold mb-4">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light opacity-75 text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="#" class="text-light opacity-75 text-decoration-none">Careers</a></li>
+                        <li class="mb-2"><a href="#" class="text-light opacity-75 text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-light opacity-75 text-decoration-none">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+                    <h6 class="fw-bold mb-4">Resources</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light opacity-75 text-decoration-none">Documentation</a></li>
+                        <li class="mb-2"><a href="#" class="text-light opacity-75 text-decoration-none">Help Center</a></li>
+                        <li class="mb-2"><a href="#" class="text-light opacity-75 text-decoration-none">API</a></li>
+                        <li class="mb-2"><a href="#" class="text-light opacity-75 text-decoration-none">Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="fw-bold mb-4">Subscribe to our newsletter</h6>
+                    <p class="text-light opacity-75 mb-3">Stay updated with the latest in Web3 subscription technology</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control bg-dark text-light border-secondary" placeholder="Your email">
