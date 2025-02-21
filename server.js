@@ -25,10 +25,11 @@ app.prepare().then(async() => {
         res.render('index'); // This should match your index.ejs file
     });
 
+    
     server.post('/service_provider',(req, res) =>{
         res.render('service_provider');
     })
-    
+
 
     server.post('/consumer',(req,res)=>{
         res.render('consumer');
