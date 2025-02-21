@@ -28,6 +28,7 @@ app.prepare().then(async() => {
     server.post('/service_provider',(req, res) =>{
         res.render('service_provider');
     })
+    
 
     server.post('/consumer',(req,res)=>{
         res.render('consumer');
