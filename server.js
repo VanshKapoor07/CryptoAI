@@ -2,9 +2,6 @@ const express = require('express');
 const path = require('path');
 const next = require('next');
 
-
-
-
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 
@@ -27,6 +24,14 @@ app.prepare().then(async() => {
     server.get('/', (req, res) => {
         res.render('index'); // This should match your index.ejs file
     });
+
+    server.post('/service_provider',(req, res) =>{
+        res.render('service_provider');
+    })
+
+    server.post('/consumer',(req,res)=>{
+        res.render('consumer');
+})
 
     server.listen(PORT, (err) => {
         if (err) throw err;
