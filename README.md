@@ -1,3 +1,3 @@
 # CryptoAI
 
-Add details here
+THIS ID FIRST CHANGE
