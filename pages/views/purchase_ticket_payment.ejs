@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Purchase ticket payment</title>
+
+    <script>
+    const client = <%- JSON.stringify(client) %>;  // JSON.stringify for safe JS usage
+    
+    const n_A = <%= num_A %>;
+    const n_B = <%= num_B %>;
+    const n_C = <%= num_C %>;
+    const my_addr = "0x51e1de64d24251bbd3d9d96914e9cb8e79e08b3396c66c974d4b6087c0273916";
+
+    async function purchase_ticket() {
+    console.log("in transaction");
+  
+    const transaction = {
+      arguments: [my_addr, n_A, n_B, n_C], // event_organizer, price
+      function: '0x51e1de64d24251bbd3d9d96914e9cb8e79e08b3396c66c974d4b6087c0273916::a5::purchase_ticket',
+      type: 'entry_function_payload',
+      type_arguments: []
+    };
+
+    try {
+      const txResponse = await window.aptos.signAndSubmitTransaction(transaction);
+      console.log('Transaction response:', txResponse);
+
+
+      console.log('Transaction successful!');
+      alert("Transaction successful, you may head back to your profile!");
+
+    } catch (error) {
+      console.error('Transaction failed:', error);
+      console.log('Transaction failed. Please try again.');
+    }
+
+}
+    </script>
+    
+
+    <body style="background-color: #e6f0ff; color: #003366; font-family: Arial, sans-serif; text-align: center; padding: 20px;">
+        <h1 style="color: #002244;">Review Payment Details</h1>
+        
+        <h3>Number of Premium Seats - <%= num_A %></h3>
+        <h3>Number of Economical Seats - <%= num_B %></h3>
+        <h3>Number of Price Saving Seats - <%= num_C %></h3>
+    
+        <button onclick="purchase_ticket()" 
+            style="background-color: #004080; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+            Confirm Transaction
+        </button>  
+    
+        <form method="post" action="/back_to_profile_post_purchase" style="margin-top: 15px;">
+            <button class="btn primary-btn btn-lg" type="submit" 
+                style="background-color: #0059b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                Back To Profile
+            </button>
+        </form>
+    </body>
+    
+</html>

@@ -1,0 +1,16 @@
+{
+    "name": "Dynamic NFT C",
+    "description": "Lower NFT for lower seats",
+    "image": "ipfs://QmXyz...abc", 
+    "attributes": [
+      {
+        "trait_type": "Level",
+        "value": 20
+      },
+      {
+        "trait_type": "Rarity",
+        "value": "Common"
+      }
+    ]
+  }
+  

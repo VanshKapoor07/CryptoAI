@@ -1,0 +1,16 @@
+{
+    "name": "Dynamic NFT B",
+    "description": "Middle NFT for normal seats",
+    "image": "ipfs://QmXyz...abc", 
+    "attributes": [
+      {
+        "trait_type": "Level",
+        "value": 30
+      },
+      {
+        "trait_type": "Rarity",
+        "value": "Rare"
+      }
+    ]
+  }
+  

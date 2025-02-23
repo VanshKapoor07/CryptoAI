@@ -1,0 +1,16 @@
+{
+    "name": "Dynamic NFT A",
+    "description": "Premium type NFT for best seats",
+    "image": "ipfs://QmXyz...abc", 
+    "attributes": [
+      {
+        "trait_type": "Level",
+        "value": 40
+      },
+      {
+        "trait_type": "Rarity",
+        "value": "Legendary"
+      }
+    ]
+  }
+  
