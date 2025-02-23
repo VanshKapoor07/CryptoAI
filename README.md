@@ -19,9 +19,9 @@ Our solution (CryptoAI) serves as a simple , safe , smart(powered by AI) and use
   -->This all is done by sale* function implemented in the smart contract.
 
 -->Selling the ticket back
-  -->If someone wishes to sell the ticket back to someone because of any reason but under some conditions only 
-     1)Profit (extra price over the original) can be set between 0 and 20 only.
-     2)60% of the total goes to the organiser and 40% to the previous owner.
+  -->If someone wishes to sell the ticket back to someone because of any reason it can be done under under some conditions only 
+     1)Profit (extra price over the original) can be set between 0 and 20 percent only.
+     2)60% of the total profit goes to the organiser and 40% to the previous owner.
   -->This all happens using resale function in the smart contract.
   -->In this way the NFT goes to the new owner from previous one.
 
