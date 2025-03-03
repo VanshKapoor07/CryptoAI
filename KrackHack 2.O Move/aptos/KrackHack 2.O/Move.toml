@@ -1,0 +1,10 @@
+[package]
+name = "a5"
+version = "5.0.0"
+
+[addresses]
+a5 = "0x51e1de64d24251bbd3d9d96914e9cb8e79e08b3396c66c974d4b6087c0273916"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "mainnet" }
+AptosTokenObjects = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-token-objects/", rev = "mainnet" }
