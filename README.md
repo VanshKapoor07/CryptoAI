@@ -48,7 +48,13 @@
 ```
 CryptoAI/
 │── .next/                        # Generated files (Next.js build output)
-│── final/                        # (Unclear purpose, might contain processed or completed files)
+│── KrackHack 2.O Move/aptos/KrackHack 2.O/                        # Move code
+│   ├── out                      
+│   │   ├── a5.mv                     # config file
+│   │   ├── package-metadata.bcs      # config file
+│   ├── sources
+│   │   ├── main.move                 # Main smart contract implementation in Move
+│   ├── Move.toml                  #toml file
 │── more_than_hour/               # (Unclear purpose)
 │── pages/views/                  # Views for front-end rendering
 │   ├── Booking.ejs
